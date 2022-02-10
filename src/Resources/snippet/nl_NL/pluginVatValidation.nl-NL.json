@@ -1,0 +1,9 @@
+{
+    "pluginVatValidation": {
+        "smallTip": "Een correct ingevuld BTW Nummer zal automatisch de bedrijfsnaam en het adres invullen.",
+        "address": {
+            "companyVatPlaceholder": "Vul BTW nummer in....",
+            "companyVatRequired":"BTW nummer moet worden ingevoerd in het juiste formaat, v.b: NLXXXXXXXXXX."
+        }
+    }
+}

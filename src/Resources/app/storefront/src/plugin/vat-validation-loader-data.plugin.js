@@ -69,12 +69,12 @@ export default class VatValidationLoaderDataPlugin extends Plugin {
   _parseData(response) {
     const { traderName, traderAddress } = JSON.parse(response);
     const formattedTraderAddress = traderAddress.replace("\n", ", ");
-    const [, address, zipCode, city] = formattedTraderAddress.match(
-      /^([^,]+), (\S+) ([^,]+)$/
+    const [address, address2, zipCode, city] = formattedTraderAddress.match(
+      /\w+/g
     );
 
     this._setInputValue(this.$companyName, traderName);
-    this._setInputValue(this.$companyAddress, address, true);
+    this._setInputValue(this.$companyAddress, address + ' ' + address2, true);
     this._setInputValue(this.$companyZipcode, zipCode);
     this._setInputValue(this.$companyCity, city, true);
   }

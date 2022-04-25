@@ -47,6 +47,8 @@ export default class VatValidationLoaderDataPlugin extends Plugin {
       this._resetAllCompanyRegistrationValues();
       this._fetchData(value);
       this._setSelectOption(this.$companyCountry, country.name);
+      /* behe 25-04-22 ugly hack TODO */
+      $('.country-select').keyup();
     }
   }
 
